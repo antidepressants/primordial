@@ -1,0 +1,19 @@
+@import "../themes/theme.scss";
+header{
+  z-index: 2;
+  background-color: $color-1;
+  font-size: 2em;
+  height: 3em;
+  display: flex;
+  *{
+    background-color: inherit;
+    padding: 0.5em 0;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  header{
+    position: sticky;
+    top: 0;
+  }
+}

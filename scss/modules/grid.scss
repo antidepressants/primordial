@@ -1,0 +1,66 @@
+.blogbg{
+  background-image: url("/media/bgs/revolt.jpg");
+}
+.maingrid{
+  width: 80%;
+  margin: 5em auto;
+  margin-bottom: 10em;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 2em;
+  .article{
+    background-color: #00000000;
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    border: 1px solid $color-3-dim;
+    border-radius: 1em;
+    .thumbnail{
+      height: 200px;
+      width: 100%;
+      overflow: hidden;
+      z-index: 1;
+      position: static;
+      img{
+        position: relative;
+        width: inherit;
+      }
+    }
+    h1{
+      margin: 0;
+      padding: 1em 1em;
+      width: 100%;
+      text-align: center;
+      font-size: 2em;
+    }
+    .info{
+      height: 1.5em;
+      margin: 1em;
+      font-size: 1em;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .maingrid{
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .maingrid{
+    grid-template-columns: auto;
+    .article{
+      .thumbnail{
+        height: 150px;
+      }
+      h1{
+        font-size: 1em;
+      }
+      .info{
+        font-size: 0.7em;
+      }
+    }
+  }
+}

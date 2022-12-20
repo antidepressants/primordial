@@ -1,0 +1,92 @@
+@import "../themes/theme.scss";
+body{
+  margin: 0;
+  .border{
+    background-color: #00000000;
+    z-index: 2;
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+  .pagetitle{
+    margin: 0 1em;
+    .title{
+      width: 80%;
+      margin: 1em auto;
+      text-align: center;
+      font-size: 4em;
+    }
+    .quote{
+      i{
+        color: $color-3-dim;
+      }
+      font-size: 1em;
+    }
+    text-align: center;
+  }
+  .main{
+    margin: 3em 0;
+  }
+  .article{
+    margin: 0 10%;
+    display: inline-block;
+    .info{
+      color: $color-3-dim;
+      font-size: 2em;
+    }
+    .pardiv{
+      padding: 0.7em;
+      border: 1px solid $color-3-dim;
+      border-radius: 1em;
+      font-size: 1.5em;
+      background-color: $color-1;
+      *{
+        background-color: inherit;
+        margin: 0;
+      }
+      p{
+        word-break: break-word;
+        line-height: 1.3em;
+      }
+      .references{
+        margin: 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  body{
+    .border{
+      position: sticky;
+      top: 6em;
+    }
+    .pagetitle{
+      .title{
+        font-size: 2em;
+      }
+      .quote{
+        font-size: 0.5em;
+      }
+    }
+  }
+  .main{
+    .article{
+      margin: 0 0.5em;
+      .pardiv{
+        font-size: 1em;
+      }
+      .references{
+        font-size: 0.7em;
+        margin: 0.5em;
+      }
+      h1{
+        font-size: 2em;
+      }
+      .info{
+        font-size: 1em;
+        text-align: center;
+      }
+    }
+  }
+}

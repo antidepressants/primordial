@@ -1,0 +1,52 @@
+@import "../themes/theme.scss";
+footer{
+  background-color: $color-1;
+  font-size: 1em;
+  min-height: 4em;
+  *{
+    background-color: inherit;
+    padding: 0.5em 0;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .footer-top{
+    width: 100%;
+    border-bottom: 1px solid $color-3-dim;
+  }
+  .footer-bottom{
+    width: 100%;
+  }
+  .footer-wrapper{
+    width:80%;
+    margin: 0 auto;
+    *{
+      margin: 0 0.5em;
+    }
+    .copyright{
+      width: 1em;
+    }
+    .socials{
+      margin: 0 auto;
+      font-size: 1.5em;
+      display: block;
+      text-align: center;
+      .lists{
+        display: flex;
+        ul{
+          display: block;
+          margin: 0 1em;
+          li{
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  form{
+    display: block;
+  }
+}

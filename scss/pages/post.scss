@@ -1,0 +1,78 @@
+.postbg{
+  background-image: url("/media/bgs/revolt_against_the_modern_world_2.jpg");
+}
+
+.post{
+  font-size: 1.5em;
+  #title{
+    margin-top: 1em;
+    grid-area: title;
+  }
+  #name{
+    margin-top: 1em;
+    grid-area: name;
+  }
+  #article{
+    grid-area: article;
+  }
+  #references{
+    margin-bottom: 1em;
+    grid-area: references;
+  }
+  #thumbnail{
+    grid-area: thumbnail;
+  }
+  #thumb-preview{
+    grid-area: thumb-prev;
+  }
+  #thumb-label{
+    padding: 0.3em;
+    input{
+      display: none;
+    }
+  }
+  #submit{
+    text-indent: 0;
+    padding: 0.3em;
+    width: 12%;
+    margin-bottom: 1em;
+    margin-left: 15%;
+    text-align: center;
+    cursor: pointer;
+    grid-area: submit;
+  }
+  .input{
+    width: 70%;
+    display: grid;
+    margin: 1em auto;
+    grid-row-gap: 0.5em;
+    grid-column-gap: 30%;
+    grid-template-areas: "title name"
+                          "article article"
+                          "references references"
+                          "thumbnail thumbnail"
+                          "submit submit";
+    *{
+      width:100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .post{
+    .input{
+      display: block;
+      input{
+        height: 2em;
+        margin: 0;
+        margin-bottom: 0.5em;
+      }
+    }
+    #textarea{
+      height: 12em;
+    }
+    #submit{
+      width: 47%;
+    }
+  }
+}

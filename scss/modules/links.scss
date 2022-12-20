@@ -1,0 +1,73 @@
+.whitelink{
+  color: $color-3;
+  transition: 0.2s ease;
+  text-decoration: none;
+  &:hover{
+   color: $color-3-dim; 
+  }
+}
+
+.redlink{
+  color: $color-4;
+  transition: 0.2s ease;
+  text-decoration: none;
+  &:hover{
+   color: $color-4-dim; 
+  }
+}
+
+.greenlink{
+  color: $color-5;
+  transition: 0.2s ease;
+  text-decoration: none;
+  &:hover{
+   color: $color-5-dim; 
+  }
+}
+
+.dimmedlink{
+  color: $color-3-dim;
+  transition: 0.2s ease;
+  text-decoration: none;
+  &:hover{
+   color: $color-3; 
+  }
+}
+
+.bglink{
+  color: $color-3;
+  background-color: $color-2;
+  text-decoration: none;
+  *{
+    transition: 0.05s ease;
+  }
+  &:hover{
+      color: $color-2; 
+      background-color: $color-3;
+    *{
+      color: $color-2; 
+      background-color: $color-3;
+    }
+  }
+}
+
+.bglink-2{
+  background-color: $color-1;
+  &:hover{
+    color: $color-1;
+  }
+}
+
+.cardlink{
+  border-radius: 1em;
+  img{
+    transition: 0.05s ease;
+    filter: brightness(80%);
+  }
+  &:hover{
+    img{
+      filter: brightness(100%);
+    }
+    transform: scale(105%,105%);
+  }  
+}

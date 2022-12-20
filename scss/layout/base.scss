@@ -1,0 +1,43 @@
+@import "../themes/theme.scss";
+*{
+  font-family: Perpetua, Baskerville, Big Caslon, Palatino Linotype, Palatino, URW Palladio L, Nimbus Roman No9 L, serif;
+  background-color: $color-2;
+  color: $color-3;
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
+}
+form{
+  display: inline-block;
+}
+input{
+  text-indent: 1em;
+  border-radius: 0.25em;
+  outline: none;
+  font-size: 1em;
+}
+textarea{
+  border-radius: 0.25em;
+  outline: none;
+  font-size: 1em;
+  resize: vertical;
+}
+.maincontainer{
+  background-color: #00000000;
+  *{
+    background-color: inherit;
+  }
+}
+.content-wrapper{
+  padding: 1em;
+  margin: 5em 20%;
+  background-color: $color-1;
+  border-radius: 0.1em;
+  display: block;
+}
+
+@media only screen and (max-width: 768px){
+  .content-wrapper{
+    margin: 2em 5%;
+  }
+}

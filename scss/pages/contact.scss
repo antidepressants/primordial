@@ -1,0 +1,64 @@
+@import "../themes/theme.scss";
+.contactbg{
+  background-image: url("/media/bgs/map.jpg");
+}
+.contact{
+  #name{
+    margin-top: 2em;
+    grid-area: name;
+  }
+  #email{
+    margin-bottom: 2em;
+    grid-area: email;
+  }
+  .input{
+    display: grid;
+    grid-template-areas: "name textarea"
+                         "email textarea";
+    grid-row-gap: 1em;
+    grid-column-gap: 2em;
+    width: 70%;
+    margin: 1em auto;
+    background-color: inherit;
+    *{
+      width: 100%;
+    }
+  }
+  #message{
+    margin-top: 2em;
+    height: 10em;
+    grid-area: textarea;
+    padding-top: 1em;
+  }
+  #submit{
+    width: 10%;
+    margin-bottom: 0.5em;
+    margin-left: 15%;
+    text-align: left;
+    cursor: pointer;
+    &:hover{
+      background-color: $color-3;
+      color: $color-2;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .contact{
+    .input{
+      display: block;
+      input{
+        height: 2em;
+        margin: 0;
+        margin-bottom: 0.5em;
+      }
+    }
+    #message{
+      height: 12em;
+    }
+    #submit{
+      width: 30%;
+      margin-left: 55%;
+    }
+  }
+}
