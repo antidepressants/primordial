@@ -3,18 +3,21 @@
   background-image: url("/media/bgs/map.jpg");
 }
 .contact{
+  font-size: 1.25em;
   #name{
-    margin-top: 2em;
+    margin-top: 3.25em;
     grid-area: name;
   }
   #email{
-    margin-bottom: 2em;
     grid-area: email;
+  }
+  #messagediv{
+    grid-area: message;
   }
   .input{
     display: grid;
-    grid-template-areas: "name textarea"
-                         "email textarea";
+    grid-template-areas: "name message"
+                         "email message";
     grid-row-gap: 1em;
     grid-column-gap: 2em;
     width: 70%;
@@ -26,8 +29,7 @@
   }
   #message{
     margin-top: 2em;
-    height: 10em;
-    grid-area: textarea;
+    min-height: 10em;
     padding-top: 1em;
   }
   #submit{
@@ -54,7 +56,7 @@
       }
     }
     #message{
-      height: 12em;
+      min-height: 12em;
     }
     #submit{
       width: 30%;

@@ -12,6 +12,7 @@ form {
 }
 
 input {
+  border: 1px solid #999999;
   text-indent: 1em;
   border-radius: 0.25em;
   outline: none;
@@ -182,7 +183,7 @@ footer .footer-wrapper .socials .lists ul li {
   }
 }
 header {
-  z-index: 2;
+  z-index: 3;
   background-color: #202124;
   font-size: 2em;
   height: 3em;
@@ -457,7 +458,11 @@ nav .navicon:hover {
 @media only screen and (max-width: 768px) {
   .bg {
     background-attachment: scroll;
-    height: 200px;
+    min-height: 200px;
+  }
+  .cardbg {
+    background-attachment: scroll;
+    min-height: 500px;
   }
 }
 .text {
@@ -479,17 +484,22 @@ nav .navicon:hover {
   background-image: url("/media/bgs/map.jpg");
 }
 
+.contact {
+  font-size: 1.25em;
+}
 .contact #name {
-  margin-top: 2em;
+  margin-top: 3.25em;
   grid-area: name;
 }
 .contact #email {
-  margin-bottom: 2em;
   grid-area: email;
+}
+.contact #messagediv {
+  grid-area: message;
 }
 .contact .input {
   display: grid;
-  grid-template-areas: "name textarea" "email textarea";
+  grid-template-areas: "name message" "email message";
   grid-row-gap: 1em;
   grid-column-gap: 2em;
   width: 70%;
@@ -501,8 +511,7 @@ nav .navicon:hover {
 }
 .contact #message {
   margin-top: 2em;
-  height: 10em;
-  grid-area: textarea;
+  min-height: 10em;
   padding-top: 1em;
 }
 .contact #submit {
@@ -527,7 +536,7 @@ nav .navicon:hover {
     margin-bottom: 0.5em;
   }
   .contact #message {
-    height: 12em;
+    min-height: 12em;
   }
   .contact #submit {
     width: 30%;
@@ -581,6 +590,7 @@ nav .navicon:hover {
   margin: auto;
 }
 .about .about-card {
+  margin-bottom: 50px;
   display: block;
   height: 300px;
 }
@@ -589,11 +599,24 @@ nav .navicon:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  .aboutbg {
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  }
   .about h1 {
     font-size: 1.5em;
   }
   .about p {
-    font-size: 1em;
+    font-size: 0.75em;
+  }
+  .about .about-card {
+    height: 170px;
+    margin-bottom: 40px;
+  }
+  .about .about-card h1 {
+    margin-top: 30px;
+  }
+  .about .quote {
+    font-size: 0.4em;
   }
 }
 .postbg {
@@ -604,11 +627,9 @@ nav .navicon:hover {
   font-size: 1.5em;
 }
 .post #title {
-  margin-top: 1em;
   grid-area: title;
 }
 .post #name {
-  margin-top: 1em;
   grid-area: name;
 }
 .post #article {
@@ -625,6 +646,7 @@ nav .navicon:hover {
   grid-area: thumb-prev;
 }
 .post #thumb-label {
+  margin: 1em;
   padding: 0.3em;
 }
 .post #thumb-label input {
@@ -653,11 +675,13 @@ nav .navicon:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  .post {
+    font-size: 1em;
+  }
   .post .input {
     display: block;
   }
   .post .input input {
-    height: 2em;
     margin: 0;
     margin-bottom: 0.5em;
   }

@@ -29,6 +29,10 @@
 @media only screen and (max-width: 768px){
   .bg{
     background-attachment: scroll;
-    height: 200px;
+    min-height: 200px;
+  }
+  .cardbg{
+    background-attachment: scroll;
+    min-height: 500px;
   }
 }
